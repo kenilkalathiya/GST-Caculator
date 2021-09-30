@@ -29,23 +29,22 @@ def gst(*args):
     t_a=a + g_a
     return g_a,t_a
 
- 
-print("Select Operation : \n 1.Addition \n 2.Subsutution\n 3.Multiplication\n 4.Division\n 5.GST\n 6.Exit")
-
-while True:
-    c = int(input("Enter choice :"))
-    b = list(map(int,input("Enter your number").split()))
-    if c==1:
-        print(total(*b))
-    elif c==2:
-        print(sub(*b))
-    elif c==3:
-        print(mult(*b))
-    elif c==4:
-        print(div(*b))
-    elif c==5:
-        a,d=gst(*b)
-        print(f"GST amount : {a}")        
-        print(f"Total amount : {d}")        
-    else:
-        break
+if __name__ == "__main__":
+    print("Select Operation : \n 1.Addition \n 2.Subsutution\n 3.Multiplication\n 4.Division\n 5.GST\n 6.Exit")
+    while True:
+        c = int(input("Enter choice : "))
+        b = list(map(int,input("Enter number : ").split()))
+        if c==1:
+            print(total(*b))
+        elif c==2:
+            print(sub(*b))
+        elif c==3:
+            print(mult(*b))
+        elif c==4:
+            print(div(*b))
+        elif c==5:
+            a,d=gst(*b)
+            print(f"GST amount : {a}")        
+            print(f"Total amount : {d}")        
+        else:
+            break
